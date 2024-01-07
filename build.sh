@@ -6,7 +6,7 @@ make info
 # 主配置名称
 PROFILE="generic"
 
-PACKAGES="luci-i18n-opkg-zh-cn luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn libustream-mbedtls ca-certificates kmod-tun open-vm-tools"
+PACKAGES="uhttpd luci-theme-bootstrap luci-i18n-base-zh-cn libustream-mbedtls ca-certificates kmod-tun open-vm-tools"
 
 FILES="files"
 

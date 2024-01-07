@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 if [ ! -f "/usr/sbin/uu/uuplugin_monitor.sh" ]; then
     wget -O /tmp/install.sh http://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh
