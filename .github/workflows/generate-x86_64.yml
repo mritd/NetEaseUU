@@ -12,8 +12,8 @@ on:
         required: false
         type: choice
         options:
-          - false
           - true
+          - false
 
 env:
   DOWNLOAD_BASE: https://archive.openwrt.org
