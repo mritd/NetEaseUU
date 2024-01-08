@@ -1,7 +1,4 @@
 #!/bin/sh
 
-if [ ! -f "/usr/sbin/uu/uuplugin_monitor.sh" ]; then
-    wget -O /tmp/install.sh http://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh
-    /bin/sh /tmp/install.sh openwrt $(uname -m)
-    rm -f /tmp/install.sh
-fi
+wget -O /tmp/install.sh http://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh
+/bin/sh /tmp/install.sh openwrt $(uname -m) && rm -f /tmp/install.sh

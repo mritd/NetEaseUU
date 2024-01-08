@@ -4,7 +4,15 @@ config interface 'loopback'
         option ipaddr '127.0.0.1'
         option netmask '255.0.0.0'
 
-config interface 'lan'
+config device
+        option name 'br-lan'
         option type 'bridge'
-        option ifname 'eth0'
+        list ports 'eth0'
+
+config interface 'lan'
+        option device 'br-lan'
+        option proto 'dhcp'
+
+config interface 'wan'
+        option device 'eth1'
         option proto 'dhcp'
