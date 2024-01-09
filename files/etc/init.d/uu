@@ -1,0 +1,23 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+    
+    if [ ! -f "/usr/sbin/uu/uuplugin_monitor.sh" ]; then
+        wget -O /tmp/install.sh http://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh
+        /bin/sh /tmp/install.sh openwrt $(uname -m)
+        rm -f /tmp/install.sh
+    fi
+
+    logger -t UU_PLUGIN "UU Plugin installed..."
+}
+
+boot() {
+    start
+}
+
+reload() {
+    start
+}
+
