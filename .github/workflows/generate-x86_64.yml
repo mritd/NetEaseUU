@@ -4,6 +4,13 @@ name: Generate x86_64 OpenWrt Firmware
 
 # Controls when the workflow will run
 on:
+  push:
+    inputs:
+      release:
+        required: false
+        type: boolean
+        default: true
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
