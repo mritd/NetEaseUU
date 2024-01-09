@@ -17,9 +17,6 @@ sed -i "s/CONFIG_TARGET_ROOTFS_SQUASHFS=y/# CONFIG_TARGET_ROOTFS_SQUASHFS is not
 # Not generate ISO images for it is too big
 sed -i "s/CONFIG_ISO_IMAGES=y/# CONFIG_ISO_IMAGES is not set/" .config
 
-# Generate esxi images
-sed -i "s/# CONFIG_VMDK_IMAGES is not set/CONFIG_VMDK_IMAGES=y/" .config
-
 # Change image size
 sed -i 's/CONFIG_TARGET_KERNEL_PARTSIZE=.*/CONFIG_TARGET_KERNEL_PARTSIZE=16/' .config
 sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=.*/CONFIG_TARGET_ROOTFS_PARTSIZE=48/' .config
