@@ -3,7 +3,7 @@
 PROFILE="generic"
 
 # qemu-ga?
-PACKAGES="-odhcp6c -odhcpd-ipv6only -ppp -ppp-mod-pppoe ca-certificates kmod-nfnetlink kmod-tun open-vm-tools"
+PACKAGES="-odhcp6c -odhcpd-ipv6only -ppp -ppp-mod-pppoe ca-certificates kmod-nfnetlink kmod-nf-conntrack-netlink kmod-tun open-vm-tools"
 
 FILES="files"
 
