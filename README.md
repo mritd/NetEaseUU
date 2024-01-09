@@ -29,7 +29,7 @@
 
 ## 其他说明
 
-- 1、系统启动后默认会联网安装 UU 插件(见 [files/etc/init.d/uu](files/tc/init.d/uu) 脚本)
+- 1、系统启动后默认会联网安装 UU 插件(见 [files/etc/init.d/uu](files/etc/init.d/uu) 脚本)
 - 2、系统默认将第一个网卡(eth0) 设置为 WAN 出口, 另一个网卡为 LAN
 - 3、手机 APP 添加路由时必须将网关设置为 `br-lan` 的 IP, 否则会提示不支持
 - 4、PVE 用户可能需要执行 `opkg install qemu-ga` 包来实现优雅关机
