@@ -2,10 +2,14 @@
 
 START=99
 
+script_addr="http://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh"
+
 start() {
     
     if [ ! -f "/usr/sbin/uu/uuplugin_monitor.sh" ]; then
-        wget -q -O /tmp/install.sh http://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh
+        logger -t UU_PLUGIN "## UU Plugin Installing..."
+
+        wget -q -O /tmp/install.sh $script_addr
         sn=$(/bin/sh /tmp/install.sh openwrt $(uname -m))
         rm -f /tmp/install.sh
 
@@ -14,9 +18,12 @@ start() {
         logger -t UU_PLUGIN "##   $sn   ##"
         logger -t UU_PLUGIN "##                          ##"
         logger -t UU_PLUGIN "##############################"
+
+        logger -t UU_PLUGIN "## UU Plugin Installed..."
+    else
+        logger -t UU_PLUGIN "## UU Plugin Already Installed, Skip..."
     fi
 
-    logger -t UU_PLUGIN "UU Plugin installed..."
 }
 
 boot() {
