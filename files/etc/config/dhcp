@@ -26,6 +26,3 @@ config dhcp lan
         option interface        lan
         option ignore   1
 
-config dhcp wan
-        option interface        wan
-        option ignore   1
