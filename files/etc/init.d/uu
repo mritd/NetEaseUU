@@ -2,7 +2,7 @@
 
 START=99
 
-script_addr="http://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh"
+script_addr="https://uurouter.gdl.netease.com/uuplugin-script/openwrt/v1/install.sh"
 
 start() {
     
