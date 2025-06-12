@@ -39,9 +39,9 @@ jobs:
 
       - name: Download Image Builder
         run: |
-          wget -q $DOWNLOAD_BASE/releases/$VERSION/targets/x86/64/$VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.xz
-          tar -xf $VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.xz
-          rm -rf $VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.xz
+          wget -q $DOWNLOAD_BASE/releases/$VERSION/targets/x86/64/$VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.zst
+          tar -I zstd -xf $VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.zst
+          rm -rf $VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.zst
           cp -r $GITHUB_WORKSPACE/origin/* $GITHUB_WORKSPACE/$VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64/
       
       - name: Run Patch and DIY Scripts
